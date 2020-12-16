@@ -4,7 +4,7 @@
 
 이제 이 그림을 직접 구현해보자.
 
-![timeline](../img/apple_104.png)
+![apple_104](https://user-images.githubusercontent.com/75867748/102371517-9bebd100-4001-11eb-8b20-9a4e59e7ee65.png)
 
 ```javascript
 // 필요한 변수 선언
@@ -36,7 +36,7 @@ function scrollLoop() {
 
 <br />
 
-![image](../img/apple_105-1.png)
+![apple_105-1](https://user-images.githubusercontent.com/75867748/102371519-9bebd100-4001-11eb-92a8-3a4bb41009ac.png)
 
 현재씬이 1이라고 가정해보자. prevScrollHeight는 씬0의 scrollheight값이고 currentScrollHeight는 씬1의 scrollheight값일 것이다. prevScrollHeight와 currentScrollHeight값의 합이 yOffset값(=모니터 상단)과 같아지는 순간 씬2의 상단이 모니터 상단에 닿는 순간일 것이다.
 <br/>
@@ -48,7 +48,7 @@ function scrollLoop() {
 
 반대로 currentScene-- 되어야 하는 상황을 살펴보도록 하겠다. 앞에서는 다음에 나올 씬이 완전히 모니터에 꽉 다 찼을 때 현재씬이 되면서 currentScene++이 되었지만, 이번에는 앞의 씬이 약간만 나와도 currentScene--가 된다.
 
-![image2](../img/apple_105-2.png)
+![apple_105-2](https://user-images.githubusercontent.com/75867748/102371521-9c846780-4001-11eb-8f09-ee7def282eec.png)
 
 현재씬이 씬2 라고 가정해보자. 지금 스크롤을 올리면서 씬1이 모니터에 빼꼼 나왔다. 이 때부터 바로 현재씬은 씬1이 되는 것이다. 즉, prevScrollHeight가 YOffset보다 커야 currentScene--이 되는 것.
 

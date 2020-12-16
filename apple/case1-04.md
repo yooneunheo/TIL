@@ -36,7 +36,7 @@ window.addEventListener('scroll', () => {
 <br />
 <br />
 
-![timeline](../img/apple_104.png)
+![apple_104](https://user-images.githubusercontent.com/75867748/102371517-9bebd100-4001-11eb-8b20-9a4e59e7ee65.png)
 2번의 상단 부분과 스크린의 상단 부분이 닿으면 2번씬이 시작된다.(초록선)
 즉, 현재 스크롤값(yOffset)이 0과 1씬의 스크롤 높이 합보다 크면 2씬이 현재씬. 다시말해 '현재 스크롤값 > 이전 씬들의 스크롤 높이합' 커야 현재씬임. 그 반대면(<) 아직 시작되지 않은 것.
 <br />

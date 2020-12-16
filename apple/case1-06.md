@@ -36,7 +36,7 @@ function scrollLoop() {
 
 이제 스크롤을 하면 다음과 같이 body 옆에 id가 붙는다.
 
-![img](../img/apple_106-1.png)
+![apple_106-1](https://user-images.githubusercontent.com/75867748/102371523-9c846780-4001-11eb-8437-0529304cff67.png)
 
 그런데 지금은 스크롤 할 때마다 id가 갱신이 되는데, 원래라면 아래와 같이 코드가 작성되어야 한다. 스크롤 됐을 때마다가 아닌 scene이 바뀔 때마다 갱신이 되어야 하므로.
 
@@ -140,7 +140,7 @@ totalScrollHeight 값을 구해 현재 스크롤 위치와 비교를 하여 curr
 
 <br />
 
-![img](../img/apple_106-2.png)
+![apple_106-2](https://user-images.githubusercontent.com/75867748/102371524-9d1cfe00-4001-11eb-9b5b-42ca788b9165.png)
 
 현재씬이 2씬이라고 가정해보자. 지금 이 상태에서 새로고침을 누른다. 그러면 다시 load가 되면서 현재 스크롤 위치와 totalScrollHeight를 비교할 것이다. 일단 for문이 돌아가면서 차례로 0씬의 높이, 1씬의 높이를 차차 더해간다. 그런데 끝까지 더하는게 아니라 현재씬까지의 높이를 구해야 하므로 현재씬을 가리키는 i번째(이 예시에서는 i=2)에 for문을 빠져나와야 한다.
 

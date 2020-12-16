@@ -24,12 +24,14 @@
 - offsetX, offsetY : 이벤트 대상이 기준, 전체 문서 기준(스크롤 포함)
 - screenX, screenY : 사용자의 모니터 화면 크기 기준
   <br />
-  <img src="../img/coor-01.png" width="450">
-  <img src="../img/coor-02.png" width="450">
-  <img src="../img/coor-03.png" width="450">
+  ![coor-01](https://user-images.githubusercontent.com/75867748/102371543-9ee6c180-4001-11eb-88a5-3b09cff9eeb9.png)
+  ![coor-02](https://user-images.githubusercontent.com/75867748/102371547-9f7f5800-4001-11eb-8814-656223c9ee2c.png)
+  ![coor-03](https://user-images.githubusercontent.com/75867748/102371548-9f7f5800-4001-11eb-97f7-248cf90b0b99.png)
+
   (출처: dreamcoding)
   <br />
   <br />
+
   > 참고 사이트
   > [clientX, offsetX, pageX, screenX의 차이](http://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/) > [요소의 절대좌표 상대좌표 구하기](https://mommoo.tistory.com/85)
 

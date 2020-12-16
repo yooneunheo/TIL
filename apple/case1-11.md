@@ -39,7 +39,7 @@ function calcValues(values, currentYOffset) {
 
 <br />
 
-![img](../img/apple_111-1.png)
+![apple_111-1](https://user-images.githubusercontent.com/75867748/102371528-9db59480-4001-11eb-806c-5ea44eb3b066.png)
 
 전체는 현재씬 구간이다. start 지점에서 opacity가 0이고 end 지점에선 opacity가 1이다. 빨간선은 애니메이션이 나타나야 하는 특정 구간이다. 파란선은 현재씬 전체에서 스크롤 된 범위다. 초록선은 특정 구간 범위 내에서 스크롤 된 범위를 나타낸다. 우리가 구해야하는 것은 이 초록색 구간이다. 따라서 파란선에서 start구간을 뺀 게 초록색이며, 이 초록색을 빨간선으로 나누면 특정 구간 내 스크롤 '비율'이다.
 
@@ -92,7 +92,7 @@ function calcValues(values, currentYOffset) {
 
 그런데 스크롤이 start 지점에 닿기 전이라면 start일 때의 애니메이션이, end 지점을 넘어서면 end 일 때의 애니메이션이 유지되도록 한다.
 
-![img](../img/apple_111-1.png)
+![apple_111-2](https://user-images.githubusercontent.com/75867748/102371529-9db59480-4001-11eb-96ca-d3731546427b.png)
 
 <br />
 

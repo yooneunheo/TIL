@@ -33,7 +33,7 @@ messageB 가 0.3일 때 나타나기 때문에 messageA가 사라질 땐 0.3.
 그런데 in일 때는 0.2 시점 이후부터 opacity를 1로 유지하라는 코드와, out일 때는 0.25 이후부터 opacity가 줄어드는 코드가 충돌하게 된다.
 따라서 in의 범위에서는 in에 적용된 애니메이션이 등장하고 out의 범위에서는 out에 적용된 애니메이션이 등장하게 해야한다.
 
-![img](../img/apple_112-1.png)
+![apple_112-1](https://user-images.githubusercontent.com/75867748/102371535-9e4e2b00-4001-11eb-974a-8a32e9356d5c.png)
 
 중간값인 0.22를 기준으로 그 전에는 in의 애니메이션이, 그 이후에는 out의 애니메이션이 적용되게 한다.
 
@@ -71,7 +71,7 @@ function playAnimation() {
 살짝 아래에 있다가 위로 올라오니까 translateY 20%에서 0%으로 올라간다.
 (기준은 자기 높이만큼.)
 
-![img](../img/apple_112-2.png)
+![apple_112-2](https://user-images.githubusercontent.com/75867748/102371540-9ee6c180-4001-11eb-892d-967499749d81.png)
 
 그리고 사라질 때는 위로 올라가니까 -20% 만큼 이동함.
 

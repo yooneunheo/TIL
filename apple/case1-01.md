@@ -1,6 +1,6 @@
 ### 강의 정리 - 인터렉션 구현 컨셉
 
-![timeline](../img/apple_101.png)
+![apple_101](https://user-images.githubusercontent.com/75867748/102371510-9a220d80-4001-11eb-8090-717fe0c47cb7.png)
 
 <br />
 #### work flow
