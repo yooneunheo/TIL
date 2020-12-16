@@ -64,17 +64,16 @@
 <br />
 <br />
 
-```
+```javascript
 function setLayout() {
-        // 각 스크롤 섹션의 높이 세팅
-        for (let i = 0; i <sceneInfo.length; i++) {
-            sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-            // 이제 구한 scrollHeight 값을 실제 html에 적용하기
-            sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
-        }
-    }
+  // 각 스크롤 섹션의 높이 세팅
+  for (let i = 0; i < sceneInfo.length; i++) {
+    sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
+    // 이제 구한 scrollHeight 값을 실제 html에 적용하기
+    sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
+  }
+}
 
-    // 사이즈가 바뀔때마다 높이 세팅 바꾸기
-    window.addEventListener('resize', setLayout);
-
+// 사이즈가 바뀔때마다 높이 세팅 바꾸기
+window.addEventListener('resize', setLayout);
 ```
