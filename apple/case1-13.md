@@ -1,4 +1,4 @@
-### 강의 정리 - 자잘한 수정사항들 처리
+### 강의 정리 - 113. 자잘한 수정사항들 처리
 
 <br />
 
@@ -19,6 +19,8 @@ for (let i = 0; i < sceneInfo.length; i++) {
 
 \*\* offset이란?
 offsetHeight는 html 객체가 원래 가지고 있는 속성으로, 높이값이다.
+window.innerHeight는 브라우저 창의 높이이고(body 안에 콘텐츠 양에 상관 없이 창의 크기)
+document.body.offsetHeight는 <body> 요소의 높이다. 이건 <body> 안에 들어있는 콘텐츠가 많아지면 많아질수록 커진다.
 [scrollHeight, clientHeight, offsetHeight 각각의 의미](https://jwizard.tistory.com/10)
 
 ---
