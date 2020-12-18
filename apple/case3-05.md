@@ -9,7 +9,7 @@ const sceneInfo = [
     // 3
    ...
     values : {
-        // 값을 세팅하지 않은 이유는 화면에 따라 변동되기 때문에 미리 알 수 없어서이다. 스크롤 할 때 계산됨
+        // 값을 미리 세팅하지 않은 이유는 화면에 따라 변동되기 때문에 미리 알 수 없어서이다. 스크롤 할 때 계산됨
         rect1X : [0, 0, {start: 0, end: 0}],
         rect2X : [0, 0, {start: 0, end: 0}]
     }
@@ -36,4 +36,79 @@ const sceneInfo = [
 
 ---
 
-(이어서)
+일단 직관적으로 떠오르는 방법이 하나 있다.
+
+\* getBoundingClientRect() : 화면에 있는 오브젝트의 크기와 위치를 가져올 수 있는 메소드.
+
+이걸 이용해보자.
+
+캔버스의 y값(혹은 top값)을 기준으로 하는데, 스크롤을 할 때마다 y값이 갱신되므로 값이 계속 바뀌어서 이를 기준으로 삼기에 무리가 있다. 애니메이션이 정확히 시작되는 시점을 설정하려면 처음에 얻었던 y값이 변하면 안 된다. 애니메이션이 처음에 시작될 때의 y위치 딱 하나만 가져오게 하자. 그리고 이 값이 보존되어야 하니 sceneInfo에 넣자.
+
+```javascript
+const sceneInfo = [
+  {
+    // 3
+   ...
+    values : {
+        rect1X : [0, 0, {start: 0, end: 0}],
+        rect2X : [0, 0, {start: 0, end: 0}],
+        rectStartY : 0,
+    }
+    ...
+```
+
+rectStartY값을 일단 0으로 둔다. 그리고 나중에 계산이 되면은 대입한다. 앞에서 말했듯이 y위치는 처음에 나오는 값만 취하고 그 이후로는 취하면 안 되기 때문에, 값이 한번 입력되면 그 이후로는 갱신되어도 대입이 안 되게 설정을 해야 한다. 다시 말해, 값이 세팅이 안 됐을 때만 값이 들어가게 한다. 한번만 스크롤해도 값이 들어가니까 그 다음에는 세팅이 안 될 것이다.
+
+```javascript
+function playAnimation() {
+    ...
+    switch (currentScene) {
+        case 3:
+        ...
+
+        if (!values.rectStartY) {
+          values.rectStartY = objs.canvas.getBoundingClientRect().top;
+        }
+        ...
+
+    }
+}
+```
+
+그렇다면 이 값을 그대로 쓰면 될까? 안 된다. 스크롤 속도에 따라 찍히는 y값이 다르게 출력된다. 그 이유는 이 값은 정확한 타이밍에 캔버스 위치를 잡아내는 아이라 스크롤 이벤트가 발생하는 순간에 딱 집어낸다. 그래서 스크롤 속도에 따라 값이 변한다. 따라서 정확한 기준점으로 삼기에 무리가 있다.
+
+그래도 일단 이걸 기준으로 계산을 해보겠다.
+<br />
+
+```javascript
+function playAnimation() {
+    ...
+    switch (currentScene) {
+        case 3:
+        ...
+
+        // 좌우 흰색 박스 그리기 (수정)
+        objs.context.fillRect(parseInt(calcValues(values.rect1X, currentYOffset)), 0, parseInt(whiteRectWidth), objs.canvas.height);
+        objs.context.fillRect(parseInt(calcValues(values.rect2X, currentYOffset)), 0, parseInt(whiteRectWidth), objs.canvas.height);
+
+    }
+}
+```
+
+여기서 살펴볼 수 있는 또 다른 문제점은 스크롤바이다. 위에서 innerwidth를 이용해 화면 크기를 구했는데 크롬의 경우 스크롤바 영역을 따로 차지하고 있기 때문에 계산에 착오가 생긴다. innerwidth는 스크롤바까지 포함한 영역이다. 하지만 현재 스크롤 바가 영향을 미치고 있기 때문에 스크롤 바를 제외한 폭을 구하는게 맞다. 따라서 innerwidth대신 offsetWidth로 바꾸자.
+
+```javascript
+function playAnimation() {
+    ...
+    switch (currentScene) {
+        case 3:
+        ...
+        // 캔버스 사이즈에 맞춰 가정한 화면 폭
+        const recalculateInnerWidth = window.offsetWidth / canvasScaleRatio;
+        const recalcualtedInnerheight = window.innerHeight / canvasScaleRatio;
+        ...
+    }
+}
+```
+
+아무튼 스크롤 속도에 따라 top 인식이 달라진다. 결론은 getBoundingClinentRect()의 top값을 가져오지 않을 것이다. 다른 방법을 찾아보자.

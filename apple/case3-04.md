@@ -30,7 +30,7 @@ function playAnimation() {
 
 ---
 
-완성버전을 보면 흰색 박스의 x위치가 옮겨진다. 즉, 스크롤 하면서 애니메이션(translateX)이 되는 것이므로 이것도 sceneInfo에 흰색 박스의 애니메이션 정보들을 배열에 넣어야 한다.
+완성버전을 보면 흰색 박스가 화면 밖으로 사라진다. 즉 x위치가 옮겨진다. 스크롤 하면서 애니메이션(translateX)이 되는 것이므로 이것도 sceneInfo에 흰색 박스의 애니메이션 정보들을 배열에 넣어야 한다.
 
 ```javascript
 const sceneInfo = [
@@ -123,7 +123,7 @@ values.rect2X[1] = values.rect2X[0] + whiteRectWidth;
 
 ---
 
-이렇게 각 박스의 x좌표가 세팅되었다. 이제 이걸 이용해서 박스를 그리자. (애니메이션 되기 전에 첫 상태)
+이렇게 각 박스의 x좌표가 세팅되었다. 이제 이걸 이용해서 박스를 그려보자.
 
 ```javascript
 function playAnimation() {
@@ -132,6 +132,7 @@ function playAnimation() {
         case 3:
         ...
       // 좌우 흰색 박스 그리기 (x, y, width, height)
+      // 현재 정지상태(추후 수정)
       objs.context.fillRect(values.rect1X[0], 0, parseInt(whiteRectWidth), recalculatedInnerHeight);
       objs.context.fillRect(values.rect2X[0], 0, parseInt(whiteRectWidth), recalculatedInnerHeight);
     }
