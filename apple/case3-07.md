@@ -1,3 +1,18 @@
+---
+title: '2020-12-18'
+excerpt: '강의 정리 - 307. 다른 씬의 캔버스 처리하기'
+toc: true
+toc_sticky: true
+toc_label: 'On this page'
+
+categories:
+  - TIL
+tags:
+  - apple
+  - clone-coding
+last_modified_at: 2020-12-18T08:06:00-05:00
+---
+
 ### 강의 정리 - 307. 다른 씬의 캔버스 처리하기
 
 <br />

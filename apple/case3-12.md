@@ -1,3 +1,18 @@
+---
+title: '2020-12-18'
+excerpt: '강의 정리 - 312. 스크롤에 따른 포지션 변경 시 정확한 위치 설정하기'
+toc: true
+toc_sticky: true
+toc_label: 'On this page'
+
+categories:
+  - TIL
+tags:
+  - apple
+  - clone-coding
+last_modified_at: 2020-12-18T08:06:00-05:00
+---
+
 ### 강의 정리 - 312. 스크롤에 따른 포지션 변경 시 정확한 위치 설정하기
 
 <br />

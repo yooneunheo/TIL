@@ -1,3 +1,18 @@
+---
+title: '2020-12-18'
+excerpt: '강의 정리 - 308. 스크롤에 따른 캔버스 포지션 변경'
+toc: true
+toc_sticky: true
+toc_label: 'On this page'
+
+categories:
+  - TIL
+tags:
+  - apple
+  - clone-coding
+last_modified_at: 2020-12-18T08:06:00-05:00
+---
+
 ### 강의 정리 - 308. 스크롤에 따른 캔버스 포지션 변경
 
 <br />
