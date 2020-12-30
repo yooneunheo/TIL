@@ -41,13 +41,13 @@ function calcValues(values, currentYOffset) {
 또 다른 예로 x축으로 0에서 100으로 이동하는 css 범위, values: { messageA_translateX: [0, 100] } 를 현재 스크롤 범위와 곱했을 경우- 스크롤 비율이 10% 일 때는 x축으로 이동값이 10이고, 절반 왔을 시점(0.5)에는 50이다.
 
 \* 참고:
-랜덤한 숫자를 만들 때 '( Math.random() \_ ( 최대값 - 최소값 ) ) + 최소값' 이런 방식을 이용하는 것과 비슷하다고 생각하면 된다.
+랜덤한 숫자를 만들 때 '( Math.random() \* ( 최대값 - 최소값 ) ) + 최소값' 이런 방식을 이용하는 것과 비슷하다고 생각하면 된다.
 
 <br />
 
 ---
 
-이제 css에 적용할 계산값을 구했으니 playAnimation 함수에 적용시키자. 0calcValues의 첫번째 매개변수에는 css 범위 정보를 넣는다.
+이제 css에 적용할 계산값을 구했으니 playAnimation 함수에 적용시키자. calcValues의 첫번째 매개변수에는 css 범위 정보를 넣는다.
 
 ```javascript
 function playAnimation() {
