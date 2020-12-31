@@ -1,0 +1,128 @@
+<!-- 출처: https://www.youtube.com/watch?v=_wBVNaREgSo -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .menu {
+        width: 20rem;
+        border-radius: 0.2rem;
+        overflow: hidden;
+    }
+
+    .menu a {
+        text-decoration: none;
+    }
+
+    .menu-item {
+        list-style: none;
+        border-top: 1px solid darkblue;
+        overflow: hidden;
+    }
+
+    .btn {
+        display: block;
+        padding: 1rem 1.2rem;
+        background: blue;
+        color: white;
+        position: relative;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-color: blue;
+        left: 1.5rem;
+        bottom: -0.5rem;
+        transform: rotate(45deg);
+    }
+
+    /* transition 애니메이션 내용은 css 폴더 참고 */
+    .menu-item__sub {
+        background: gray;
+        transition: max-height 0.3s;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .menu-item__sub a {
+        display: block;
+        padding: 1rem 1.6rem;
+        color: white;
+        font-size: 0.9rem;
+        position: relative;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .menu-item__sub a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.4rem;
+        height: 100%;
+        background: blue;
+        transform: translateX(-0.4rem);
+        transition: 0.3s;
+        opacity: 0;
+    }
+    
+    .menu-item__sub a:hover::before {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu-item:target .menu-item__sub {
+        max-height: 10em;
+    }
+
+</style>
+<body>
+    <div class="menu">
+        <li class="menu-item" id="profile">
+            <a href="#profile" class="btn">profile</a>
+            <div class="menu-item__sub">
+                <a href="#">posts</a>
+                <a href="#">pictures</a>
+            </div>
+        </li>
+        <li class="menu-item" id="messages">
+            <a href="#messages" class="btn">messages</a>
+            <div class="menu-item__sub">
+                <a href="#">new</a>
+                <a href="#">sent</a>
+                <a href="#">spam</a>
+            </div>
+        </li>
+        <li class="menu-item" id="settings">
+            <a href="#settings" class="btn">settings</a>
+            <div class="menu-item__sub">
+                <a href="#">password</a>
+                <a href="#">language</a>
+            </div>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="btn">logout</a>
+        </li>
+    </div>
+</body>
+</html>
