@@ -139,3 +139,18 @@ button:active {
   width: 475px;
   height: 475px;
 }
+
+@media screen and (max-width: 720px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container {
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 100vh;
+    transform: translate(0, 0);
+  }
+}
