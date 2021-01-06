@@ -7,15 +7,14 @@ function start() {
   let rotate = document.querySelectorAll(".circle");
   let slide = document.querySelectorAll("img");
   let button = document.querySelectorAll("button");
-  startX,
+  let startX,
     walk,
     endPos,
     result,
-    walkLastPos,
-    (degree = 0),
-    (rotPoint = 0),
-    (transition = 1000),
-    (delay = transition / 4);
+    walkLastPos = 0,
+    rotPoint = 0,
+    transition = 1000,
+    delay = transition / 4;
 
   const [prev, next] = button;
 
@@ -53,6 +52,7 @@ function start() {
       }deg)`;
       titleShow(x);
     }, transition / 2);
+
     setTimeout(() => {
       rotate[x].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
       rotPoint = x;
@@ -60,7 +60,7 @@ function start() {
   }
 
   function picAnimNext() {
-    let x = rotPoint - 1,
+    let x = slide.length - 1,
       walk = 0;
 
     rotate[x].style.transform = `translate(-50%, -50%) rotate(${walk + 10}deg)`;
@@ -70,8 +70,8 @@ function start() {
       rotate[x].style.transform = `translate(-50%, -50%) rotate(${
         walk - 5
       }deg)`;
-      titleShow(x);
     }, transition / 2);
+
     setTimeout(() => {
       rotate[x].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
       rotPoint = x;
@@ -96,23 +96,27 @@ function start() {
     } else {
       slide[x - 1].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
       slide[x].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
-      slide[x].style.transform = `translate(-50%, -50%) rotate(${
+      rotate[x].style.transform = `translate(-50%, -50%) rotate(${
         walk + 90
       }deg)`;
-      slide[x - 1].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
+      rotate[
+        x - 1
+      ].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
       titleFade(x + 1);
 
       setTimeout(() => {
-        rotate[x - 1].style.transfrom = `translate(-50%, -50%) rotate(${
+        rotate[x - 1].style.transform = `translate(-50%, -50%) rotate(${
           walk - 10
         }deg)`;
         titleShow(x - 1);
       }, transition / 2);
+
       setTimeout(() => {
         rotate[x - 1].style.transform = `translate(-50%, -50%) rotate(${
           walk + 5
         }deg)`;
       }, transition);
+
       setTimeout(() => {
         rotate[
           x - 1
@@ -137,32 +141,28 @@ function start() {
       return;
     } else {
       slide[x].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
-      slide[x].style.transform = `translate(-50%, -50%) rotate(${
+      rotate[x].style.transform = `translate(-50%, -50%) rotate(${
         walk - 90
       }deg)`;
       slide[x + 1].style.transform = `translate(-50%, -50%) rotate(${walk}deg)`;
-      slide[x + 1].style.transform = `translate(-50%, -50%) rotate(${
+      rotate[x + 1].style.transform = `translate(-50%, -50%) rotate(${
         walk - 6
       }deg)`;
       titleFade(x + 1);
 
       setTimeout(() => {
-        rotate[x + 1].style.transfrom = `translate(-50%, -50%) rotate(${
-          walk + 10
-        }deg)`;
-        titleShow(x + 1);
-      }, transition / 2);
-      setTimeout(() => {
         rotate[x + 1].style.transform = `translate(-50%, -50%) rotate(${
           walk + 10
         }deg)`;
         titleShow(x + 1);
       }, transition / 2);
+
       setTimeout(() => {
         rotate[x + 1].style.transform = `translate(-50%, -50%) rotate(${
           walk - 3
         }deg)`;
       }, transition);
+
       setTimeout(() => {
         rotate[
           x + 1
@@ -173,43 +173,58 @@ function start() {
     console.log(rotPoint);
   }
 
+  // SWIPE CODES
 
-  slide.forEach((e,i) => {
-      slide[i].addEventListener('touchstart', (e) => {
-          startX = Math.floor(e.touches[0].clientX);
-          walk=0;
-      }, {passive: true});
-      slide[i].addEventListener('touchmove', (e) => {
-          walk = Math.floor(e.touches[0].clientX) - startX;
-          rotate[i].style.transition = `${transition*0}ms ease-in-out`;
-          rotate[i].style.transform = `translate(-50%, -50%) rotate(%{degree + (walk/20)}deg)`;
-          walkLastPos = walk;
-          console.log(`Walk: ${walk}`);
-      }, {passive: true});
+  slide.forEach((e, i) => {
+    slide[i].addEventListener(
+      "touchstart",
+      (e) => {
+        startX = Math.floor(e.touches[0].clientX);
+        walk = 0;
+      },
+      { passive: true },
+    );
 
-      slide[i].addEventListener('touchend', (e)=> {
-          endPos = Math.floor((e.changedTouches[0].clientX + walk));
-          walkLastPos = endPos - startX;
-          if(walkLastPos === walk) {
-              const target = e.target;
-              target.style.transition = `${transition/2}ms ease-in`;
-              descTitleText[i].style.top = `0px`;
-              descTitleText[i].style.opacity = 1;
+    slide[i].addEventListener(
+      "touchmove",
+      (e) => {
+        walk = Math.floor(e.touches[0].clientX) - startX;
+        rotate[i].style.transition = `${transition * 0}ms ease-in-out`;
+        rotate[i].style.transform = `translate(-50%, -50%) rotate(${
+          degree + walk / 20
+        }deg)`;
+        walkLastPos = walk;
+        console.log(`Walk: ${walk}`);
+      },
+      { passive: true },
+    );
 
-              if (degree===0) {
-                  target.classList.add('pic-big');
-                  descTitleText[i].style.top = `0px`;
-                  descTitleText[i].style.opacity = 1;
-              }
-              console.log(`walk nol`);
+    slide[i].addEventListener(
+      "touchend",
+      (e) => {
+        endPos = Math.floor(e.changedTouches[0].clientX + walk);
+        walkLastPos = endPos - startX;
+        if (walkLastPos === walk) {
+          const target = e.target;
+          target.style.transition = `${transition / 2}ms ease-in`;
+          descTitleText[i].style.top = `0px`;
+          descTitleText[i].style.opacity = 1;
+
+          if (degree === 0) {
+            target.classList.add("pic-big");
+            descTitleText[i].style.top = `0px`;
+            descTitleText[i].style.opacity = 1;
           }
-
-          else if (endPos < startX) {
-              rotate[i].style.transition = `${transition/2}ms ease-in-out`;
-              fNext();
-          } else {
-              rotate[i].style.transition = `${transition/2}ms ease-in-out`;
-              fPrev();
-          }
-      }, {passive: true});
-});
+          console.log(`walk nol`);
+        } else if (endPos < startX) {
+          rotate[i].style.transition = `${transition / 2}ms ease-in-out`;
+          fNext();
+        } else {
+          rotate[i].style.transition = `${transition / 2}ms ease-in-out`;
+          fPrev();
+        }
+      },
+      { passive: true },
+    );
+  });
+}
