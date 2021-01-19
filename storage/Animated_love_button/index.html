@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heart-btn">
+      <div class="content">
+        <span class="heart"></span>
+        <span class="like">Like</span>
+        <span class="num"></span>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".heart").addEventListener("click", (e) => {
+        document.querySelector(".heart").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+.heart-htn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  border: 2px solid #eae2e1;
+  padding: 13px 16px;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.content .heart {
+  height: 90px;
+  width: 90px;
+  background: url("img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  position: absolute;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+}
+
+.heart.active {
+  background-position: right;
+  animation: animate 0.8s steps(28) 1;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.like {
+  margin-left: 30px;
+  font-size: 21px;
+  color: grey;
+}
+
+.num:before {
+  content: "12";
+  font-size: 21px;
+  font-weight: 600;
+  color: #9c9496;
+  margin-left: 7px;
+}
