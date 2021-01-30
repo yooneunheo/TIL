@@ -41,7 +41,7 @@ class UI {
     products.forEach((product) => {
       result += `
       <!-- single product -->
-      <article class="product">
+      <article class="product"> // product-item
         <div class="img-container">
           <img src=${product.image} 
               class="product-img"/>
