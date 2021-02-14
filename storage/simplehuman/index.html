@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simplehuman</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/nomalize.css"> 
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!--  icon  -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- javascript   -->
+    <script src="js/sidebar.js" defer></script>
+</head>
+
+<body>
+    <!-- checkbox for sidebar  -->
+    <input type="checkbox" id="sidebar">
+    <!-- header -->
+    <header id="header">
+        <!-- header : logo -->
+        <h1><a class="ir" href="http://www.example.com/">logo</a></h1>
+        <!-- header : sidebar icon -->
+        <label for="sidebar" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
+    <!--  sidebar  -->
+    <div class="sidebar">
+        <ol class="sidebar_contents">
+            <li><a href="http://www.example.com/">trash cans</a></li>
+            <li><a href="http://www.example.com/">soap pumps</a></li>
+            <li><a href="http://www.example.com/">sensor mirrors</a></li>
+            <li><a href="http://www.example.com/">kitchen</a></li>
+            <li><a href="http://www.example.com/">bath</a></li>
+            <li><a href="http://www.example.com/">sale</a></li>
+            <li id="toggle1"><a href="#">refills+<i class="xi-angle-down-min" id="arrow1"></i></a></li>
+            <li id="nested1"><a href="http://www.example.com/">custom fit liners</a></li>
+            <li id="nested2"><a href="http://www.example.com/">soap refills</a></li>
+            <li id="nested3"><a href="http://www.example.com/">hand sanitizer</a></li>
+
+            <li id="toggle2"><a href="#">support<i class="xi-angle-down-min" id="arrow2"></i></a></li>
+            <li id="nested4"><a href="http://www.example.com/">product registration</a></li>
+            <li id="nested5"><a href="http://www.example.com/">product support</a></li>
+
+            <li><a href="http://www.example.com/">account</a></li>
+        </ol>
+        <!--  sidebar area (non menu)  -->
+        <label for="sidebar"></label>
+    </div>
+    <!--  background blur  -->
+    <label for="sidebar" class="background"></label>
+    <!-- section 1 : bin banner -->
+    <section id="bin_banner"><img src="images/main_bin.png" alt="bin banner image"></section>
+    <!-- section 1 : bin contents -->
+    <section id="bin_content">
+        <div class="wrap">
+            <!-- section 1 : bin contents - title -->
+            <div class="bin_text">
+                <h1>trash never looked so good</h1>
+                <h2><a href="http://www.example.com/">view more</a></h2>
+            </div>
+            <!-- section 1 : bin contents - list -->
+            <ul>
+                <li class="bin_container">
+                    <a href="http://www.example.com/">
+                        <p><span>trash can</span><br>
+                            motion sensor</p>
+                        <img src="images/prd_bin_01.png" alt="sensor bin">
+                    </a>
+                </li>
+                <li class="bin_container">
+                    <a href="http://www.example.com/">
+                        <p><span>trash can</span><br>
+                            step can</p>
+                        <img src="images/prd_bin_02.png" alt="step can">
+                    </a>
+                </li>
+                <li class="bin_container">
+                    <a href="http://www.example.com/">
+                        <p><span>trash can</span><br>
+                            classic step</p>
+                        <img src="images/prd_bin_03.png" alt="classic step">
+                    </a>
+                </li>
+                <li class="bin_container">
+                    <a href="http://www.example.com/">
+                        <p><span>trash can</span><br>
+                            open top</p>
+                        <img src="images/prd_bin_04.png" alt="open top">
+                    </a>
+                </li>
+                <li class="bin_container">
+                    <a href="http://www.example.com/">
+                        <p><span>trash can</span><br>
+                            small</p>
+                        <img src="images/prd_bin_05.png" alt="small">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section 2: pump banner -->
+    <section id="pump_banner"><img src="images/main_pump.png" alt="pump banner image"></section>
+    <!-- section 2: pump contents -->
+    <section id="pump_content">
+        <div class="wrap">
+            <!-- section 2: pump contents - title -->
+            <div class="pump_text">
+                <h1>touch-free soap pumps</h1>
+                <h2><a href="http://www.example.com/">view more</a></h2>
+            </div>
+            <!-- section 2: pump contents - list -->
+            <ul>
+                <li class="pump_container">
+                    <a href="http://www.example.com/">
+                        <p><span>soap pump</span><br>
+                            liquid sensor pump</p>
+                        <img src="images/prd_pump_01.png" alt="liquid sensor pump">
+                    </a>
+                </li>
+                <li class="pump_container">
+                    <a href="http://www.example.com/">
+                        <p><span>soap pump</span><br>
+                            foam sensor pump</p>
+                        <img src="images/prd_pump_02.png" alt="foam sensor pump">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section 3 : mirror banner -->
+    <section id="mirror_banner"><img src="images/main_mirror.png" alt="mirror banner image"></section>
+    <!-- section 3: mirror contents -->
+    <section id="mirror_content">
+        <div class="wrap">
+            <!-- section 3: mirror contents - title -->
+            <div class="mirror_text">
+                <h1>take the best light with you</h1>
+                <h2><a href="http://www.example.com/">view more</a></h2>
+            </div>
+            <!-- section 3: mirror contents - list -->
+            <ul>
+                <li class="mirror_container">
+                    <a href="http://www.example.com/">
+                        <p><span>sensor mirror</span><br>
+                            hi-fi</p>
+                        <img src="images/prd_mirror_01.png" alt="hi-fi">
+                    </a>
+                </li>
+                <li class="mirror_container">
+                    <a href="http://www.example.com/">
+                        <p><span>sensor mirror</span><br>
+                            trio</p>
+                        <img src="images/prd_mirror_02.png" alt="trio">
+                    </a>
+                </li>
+                <li class="mirror_container">
+                    <a href="http://www.example.com/">
+                        <p><span>sensor mirror</span><br>
+                            round</p>
+                        <img src="images/prd_mirror_03.png" alt="round">
+                    </a>
+                </li>
+                <li class="mirror_container">
+                    <a href="http://www.example.com/">
+                        <p><span>sensor mirror</span><br>
+                            compact</p>
+                        <img src="images/prd_mirror_04.png" alt="compact">
+                    </a>
+                </li>
+                <li class="mirror_container">
+                    <a href="http://www.example.com/">
+                        <p><span>sensor mirror</span><br>
+                            wall mount</p>
+                        <img src="images/prd_mirror_05.png" alt="wall mount">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="wrap">
+            <!-- footer : sns -->
+            <ul class="sns">
+                <li><a href="https://www.facebook.com/"><i class="xi-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="xi-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/"><i class="xi-youtube-play"></i></a></li>
+                <li><a href="https://www.pinterest.co.kr/"><i class="xi-pinterest-p"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="xi-twitter"></i></a></li>
+            </ul>
+            <!-- footer : submenu -->
+            <ul class="footer_menu">
+                <li><a href="http://www.example.com/">Support</a></li>
+                <li><a href="http://www.example.com/">Company</a></li>
+                <li><a href="http://www.example.com/">Contact</a></li>
+            </ul>
+            <!-- footer : copyright -->
+            <p>Copyright © 2020 simplehuman. All rights Reseved. <a href="http://www.example.com/">Terms</a>, <a href="http://www.example.com/">Privacy</a> & <a href="http://www.example.com/">Accessibility</a><br>
+                <span><a href="http://www.example.com/">Do Not Sell Personal Information</a></span></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/kursor"></script>
+    <script>
+        new kursor({
+            type: 4,
+            removeDefaultCursor: true,
+            color: 'rgba(0,0,0,0.5)',
+        })
+    </script>
+</body>
+
+</html>

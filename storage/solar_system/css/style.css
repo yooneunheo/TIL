@@ -1,0 +1,145 @@
+body {
+  height: 1000vw;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* space */
+.space {
+  background: url('../images/background.jpg');
+  background-size: contain;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+}
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.place {
+  width: 100vw;
+  height: 100vh;
+  transform: translateZ(-490vw);
+  transform-style: preserve-3d;
+}
+.wall {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/background.jpg');
+  background-size: contain;
+}
+.wall-left {
+  width: 1000vw;
+  background: url('../images/background.jpg');
+  background-size: contain;
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+.wall-right {
+  width: 1000vw;
+  background: url('../images/background.jpg');
+  background-size: contain;
+  transform: rotateY(90deg) translateZ(-400vw);
+}
+
+/* 거리, 행성의 각도 수정하기 */
+.wall-front-a {
+  transform: translateZ(300vw);
+}
+.wall-front-b {
+  transform: translateZ(0vw);
+}
+.wall-front-c {
+  transform: translateZ(-20vw);
+}
+.wall-front-d {
+  transform: translateZ(-100vw);
+}
+.wall-front-e {
+  transform: translateZ(-150vw);
+}
+.wall-front-f {
+  transform: translateZ(-400vw);
+}
+.wall-front-g {
+  transform: translateZ(-600vw);
+}
+.wall-front-h {
+  transform: translateZ(-800vw);
+}
+.wall-front-i {
+  transform: translateZ(-1000vw);
+}
+.wall-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.planet {
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+  background-size: cover;
+  box-shadow: -15px -15px 50px 2px #000 inset, 0 0 15px 2px #000;
+  animation: spin 30s linear alternate infinite;
+  /* transform: rotate(40deg); */
+}
+
+@keyframes spin {
+  100% {
+    background-position: 100%;
+  }
+}
+
+.sun {
+  background-image: url(../images/00-sun.png);
+}
+.mercury {
+  background-image: url(../images/01-mercury.png);
+}
+.venus {
+  background-image: url(../images/02-venus.jpg);
+}
+.earth {
+  background-image: url(../images/03-earth.jpg);
+}
+.mars {
+  background-image: url(../images/04-mars.jpg);
+}
+.jupiter {
+  background-image: url(../images/05-jupiter.png);
+}
+.saturn {
+  background-image: url(../images/06-saturn.jpg);
+}
+.uranus {
+  background-image: url(../images/07-uranus.jpg);
+}
+.neptune {
+  background-image: url(../images/08-neptune.jpg);
+}
+
+.progress-bar-con {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 5px;
+  background: #555;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: #00a8ff;
+}

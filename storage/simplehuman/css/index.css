@@ -1,0 +1,474 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #818285;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ir {
+  text-indent: -9999px;
+}
+
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*  header  */
+#header {
+  width: 100%;
+  height: 60px;
+  padding: 18px 50px;
+  background-color: #fff;
+  position: fixed;
+  box-shadow: 0px 2px 3px #eeeeee;
+  z-index: 1;
+}
+
+/*  header logo  */
+#header h1 a {
+  display: block;
+  width: 142px;
+  height: 26px;
+  background: url(../images/sprite.png) 0 0;
+}
+
+/*  section 1: bin banner  */
+#bin_banner {
+  overflow: hidden;
+}
+
+#bin_banner img {
+  float: left;
+  width: 50%;
+  margin: 15% 0 15% 4%;
+}
+
+/*  section 1: bin contents - title  */
+#bin_content .bin_text {
+  width: 100%;
+  line-height: 200%;
+  padding: 1%;
+  overflow: hidden;
+}
+
+#bin_content .bin_text h1 {
+  font-size: 20px;
+  font-weight: 400;
+  float: left;
+}
+
+#bin_content .bin_text h2 a {
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 400;
+  float: right;
+  transition: 0.5s;
+}
+#bin_content .bin_text h2 a:hover {
+  color: #eeeeee;
+}
+/*  section 1: bin contents - list   */
+#bin_content ul {
+  overflow: hidden;
+}
+
+#bin_content .bin_container {
+  float: left;
+  width: 31.333%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  margin: 1%;
+}
+
+#bin_content .bin_container a {
+  display: block;
+  transition: 0.8s;
+}
+
+#bin_content .bin_container:hover a {
+  opacity: 0.3;
+}
+
+#bin_content .bin_container img {
+  width: 95%;
+}
+
+#bin_content .bin_container p {
+  position: absolute;
+  top: 4%;
+  left: 7%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%;
+}
+
+#bin_content .bin_container a span {
+  color: #cccccc;
+}
+
+/*  section 2 : pump banner  */
+#pump_banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+#pump_banner img {
+  width: 50%;
+  float: right;
+  margin: 20% 6% 15%;
+}
+
+/*  section 2 : pump contents - title  */
+#pump_content .pump_text {
+  width: 100%;
+  line-height: 200%;
+  padding: 1%;
+  overflow: hidden;
+}
+
+#pump_content .pump_text h1 {
+  font-size: 20px;
+  font-weight: 400;
+  float: left;
+}
+
+#pump_content .pump_text h2 a {
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 400;
+  float: right;
+  transition: 0.5s;
+}
+#pump_content .pump_text h2 a:hover {
+  color: #eee;
+}
+
+/*  section 2 : pump contents - list  */
+#pump_content ul {
+  overflow: hidden;
+}
+
+#pump_content .pump_container {
+  float: left;
+  width: 48%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  margin: 1%;
+}
+
+#pump_content .pump_container img {
+  width: 95%;
+}
+
+#pump_content .pump_container p {
+  position: absolute;
+  top: 4%;
+  left: 7%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%;
+}
+
+#pump_content .pump_container span {
+  color: #cccccc;
+}
+
+#pump_content .pump_container a {
+  display: block;
+  transition: 0.8s;
+}
+
+#pump_content .pump_container:hover a {
+  opacity: 0.3;
+}
+
+/*  section 3 : mirror banner  */
+#mirror_banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+#mirror_banner img {
+  float: left;
+  width: 50%;
+  margin: 20% 0% 15%;
+}
+
+/*  section 3 : mirror contents - title  */
+#mirror_content .mirror_text {
+  width: 100%;
+  line-height: 200%;
+  padding: 1%;
+  overflow: hidden;
+}
+
+#mirror_content .mirror_text > h1 {
+  font-size: 20px;
+  font-weight: 400;
+  float: left;
+}
+
+#mirror_content .mirror_text > h2 > a {
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 400;
+  float: right;
+  transition: 0.5s;
+}
+#mirror_content .mirror_text > h2 > a:hover {
+  color: #eee;
+}
+
+/*  section 3 : mirror contents - list  */
+#mirror_content ul {
+  overflow: hidden;
+}
+
+#mirror_content .mirror_container {
+  float: left;
+  width: 31.333%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  margin: 1%;
+}
+
+#mirror_content .mirror_container img {
+  width: 95%;
+}
+
+#mirror_content .mirror_container p {
+  position: absolute;
+  top: 4%;
+  left: 7%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%;
+}
+
+#mirror_content .mirror_container span {
+  color: #cccccc;
+}
+
+#mirror_content .mirror_container a {
+  display: block;
+  transition: 0.8s;
+}
+
+#mirror_content .mirror_container:hover a {
+  opacity: 0.3;
+}
+
+/*  footer  */
+#footer {
+  display: inline-block;
+  width: 100%;
+  height: 9 0px;
+  overflow: hidden;
+  margin: 5% 0;
+}
+
+/*  footer : sns  */
+.sns li {
+  display: inline-block;
+  margin: 10px;
+  float: left;
+}
+.sns i {
+  font-size: 20px;
+  transition: 0.5s;
+}
+.sns i:hover {
+  color: #eee;
+}
+/*  footer : submenu  */
+.footer_menu li {
+  display: inline-block;
+  float: right;
+  font-size: 15px;
+  margin: 1%;
+}
+.footer_menu li a {
+  transition: 0.5s;
+}
+.footer_menu li a:hover {
+  color: #eee;
+}
+
+/*  footer : copyright  */
+#footer p {
+  clear: both;
+  display: block;
+  font-size: 12px;
+  line-height: 130%;
+  margin: 1%;
+}
+
+#footer p a {
+  display: inline-block;
+  color: #cccccc;
+}
+#footer p a:hover {
+  color: #eee;
+}
+
+#footer p a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: #cccccc;
+}
+
+/*  mediaquery  */
+@media (max-width: 768px) {
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /*  header  */
+  #header {
+    height: 40px;
+    padding: 14px 20px;
+  }
+
+  /*  header logo  */
+  #header h1 a {
+    width: 85px;
+    height: 15px;
+    background: url(../images/sprite.png) -0px -95px;
+  }
+
+  /*  section 1: bin banner  */
+  #bin_banner img {
+    width: 99%;
+    margin: 20% 1px 15%;
+  }
+
+  /*  section 1: bin contents - title  */
+  #bin_content .bin_text > h1 {
+    font-size: 14px;
+  }
+  #bin_content .bin_text > h2 > a {
+    font-size: 14px;
+  }
+
+  /*  section 1: bin contents -list */
+  #bin_content .bin_container {
+    width: 99%;
+    margin: 1%;
+    text-align: center;
+  }
+  #bin_content .bin_container img {
+    width: 45%;
+  }
+  #bin_content .bin_container p {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: left;
+  }
+
+  /*  section 2 : pump banner  */
+  #pump_banner img {
+    width: 99%;
+    margin: 20% 1px 15%;
+  }
+
+  /*  section 2 : pump contents - title  */
+  #pump_content .pump_text h1 {
+    font-size: 14px;
+  }
+  #pump_content .pump_text h2 a {
+    font-size: 14px;
+  }
+
+  /*  section 2 : pump contents - list  */
+  #pump_content .pump_container {
+    width: 99%;
+    margin: 1%;
+    text-align: center;
+  }
+  #pump_content .pump_container img {
+    width: 45%;
+  }
+  #pump_content .pump_container p {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: left;
+  }
+
+  /*  section 3 : mirror banner  */
+  #mirror_banner img {
+    width: 99%;
+    margin: 20% 1px 15%;
+  }
+
+  /*  section 3 : mirror contents - title  */
+  #mirror_content .mirror_text h1 {
+    font-size: 14px;
+  }
+  #mirror_content .mirror_text h2 a {
+    font-size: 14px;
+  }
+
+  /*  section 3 : mirror contents - list  */
+  #mirror_content .mirror_container {
+    width: 99%;
+    margin: 1%;
+    text-align: center;
+  }
+  #mirror_content .mirror_container img {
+    width: 45%;
+  }
+  #mirror_content .mirror_container p {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: left;
+  }
+
+  /*  footer  */
+  #footer {
+    margin: 5% 0;
+  }
+
+  /* footer : sns */
+  .sns i {
+    font-size: 15px;
+  }
+
+  /*  footer : submenu  */
+  .footer_menu {
+    display: block;
+    float: right;
+  }
+  .footer_menu li {
+    font-size: 11px;
+    margin: 8px;
+  }
+
+  /*  footer : copyright  */
+  #footer p {
+    display: block;
+    font-size: 8px;
+    line-height: 130%;
+    margin: 4% 1%;
+  }
+}
