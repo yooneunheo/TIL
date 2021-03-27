@@ -1,0 +1,16 @@
+.movie {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.movie .movie-title {
+  flex-grow: 1;
+}
+
+.movie .movie-year {
+  color: darkgray;
+}
