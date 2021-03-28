@@ -6,23 +6,7 @@ class app extends Component {
   id = 0;
 
   state = {
-    information: [
-      {
-        id: 0,
-        name: '홍길동',
-        phone: '010-0000-0001'
-      },
-      {
-        id: 1,
-        name: 'rlaalswns',
-        phone: '010-0000-0002'
-      },
-      {
-        id: 3,
-        name: '벨로퍼트',
-        phone: '010-0000-0003'
-      }
-    ],
+    information: [],
     keyword: ''
   };
 
