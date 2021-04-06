@@ -1,0 +1,42 @@
+.container {
+  padding: 0.2em;
+}
+
+.container.grid {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  transition: transform 0.25s ease-in;
+}
+
+.video:hover {
+  transform: scale(1.02);
+}
+
+.thumbnail {
+  width: 40%;
+  height: 100%;
+}
+
+.metadata {
+  margin-left: 0.2em;
+}
+
+.title,
+.channel {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.channel {
+  font-size: 0.6rem;
+}
